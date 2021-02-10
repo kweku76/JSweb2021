@@ -21,7 +21,7 @@ body {
     width: auto;
     max-width: 900px;
     padding: 30px 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgb(255 255 255 / 77%);
     box-shadow: 0 20px 40px 10px rgb(54 104 140 / 26%);
 }
