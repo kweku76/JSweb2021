@@ -12,7 +12,22 @@ function newQuote() {
   console.log(quote);
 
   //we use Math.floor and random to get a random quote and round the number to a whole number and not decimal.
-  authorText.textContent = quote.author;
+  // to check if author field is blank and replace with 'unknown'
+  if (!quote.author) {
+    //..if there is no author
+    authorText.textContent = "Unknown Author"; //..then show 'unknown author'
+  } else {
+    //...or
+    authorText.textContent = quote.author; //...show author
+  }
+  // check quote length to determine styling
+  if (quote.text.lenngth > 50) {
+    //if quote text is greater than number then change css to long-quote
+    quoteText.classList.add("long-quote");
+  } else {
+    //..otherwise...
+    quoteText.classList.remove("long-quote"); //..dont use long-text class
+  }
   quoteText.textContent = quote.text;
   //this sets the value of text content to be shown in the html element.
 }
