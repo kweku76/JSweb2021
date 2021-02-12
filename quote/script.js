@@ -21,7 +21,7 @@ function newQuote() {
     authorText.textContent = quote.author; //...show author
   }
   // check quote length to determine styling
-  if (quote.text.lenngth > 50) {
+  if (quote.text.length > 50) {
     //if quote text is greater than number then change css to long-quote
     quoteText.classList.add("long-quote");
   } else {
@@ -45,5 +45,15 @@ async function getQuotes() {
   }
   //the try catch statement allows us to attempt to complete a fetch request, if it doesnt work we can catch the error info and do something with it.
 }
+
+//Tweet Quote
+function tweetQuote() {
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+  window.open(twitterUrl, "_bank");
+}
+// Event Listeners
+//newQuoteBtn.addEventListener("click", newQuote);
+twitterBtn.addEventListener("click", tweetQuote);
+
 // on load
 getQuotes();
