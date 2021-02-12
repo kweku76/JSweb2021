@@ -49,11 +49,11 @@ async function getQuotes() {
 //Tweet Quote
 function tweetQuote() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
-  window.open(twitterUrl, "_bank");
+  window.open(twitterUrl, "_bank"); //allows us to open a new browser window to twitter url
 }
 // Event Listeners
-//newQuoteBtn.addEventListener("click", newQuote);
-twitterBtn.addEventListener("click", tweetQuote);
 
+twitterBtn.addEventListener("click", tweetQuote);
+newQuoteBtn.addEventListener("click", newQuote);
 // on load
 getQuotes();
